@@ -1,0 +1,14 @@
+.header {
+    background-color: #DDDEE3;
+    display: flex;
+    padding: 18px 70px;
+}
+
+.header_type_white {
+    background-color: #FAFAFA;
+}
+
+.header__logo {
+    margin-right: 44px;
+}
+

@@ -1,0 +1,39 @@
+.search__toggle-label {
+    margin: 0 14px 0 29px;
+}
+
+.search__toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.search__toggle_visible {
+    background: url('../../images/toggle_off.svg') right no-repeat;
+    background-position: 20% 50%;
+    background-color: #A0A0A0;
+    border-radius: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 36px;
+    height: 20px;
+    transition: background-position 0.3s, background-color 0.3s;
+}
+
+.search__toggle_visible {
+    cursor: pointer;
+}
+
+.search__toggle:checked + .search__toggle_visible {
+    background: url('../../images/toggle.svg') right no-repeat;
+    background-position: 80% 50%;
+    background-color: #2BE080;
+}
+
+.search__toggle:disabled + .search__toggle_visible {
+    background: url('../../images/toggle_off.svg');
+    background-position: 20% 50%;
+    background-color: #EBEBEB;
+}

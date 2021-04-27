@@ -1,0 +1,78 @@
+.header__navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__navigation_position_right {
+    justify-content: flex-end
+}
+
+.header__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.header__link:not(:last-child) {
+    margin-right: 10px;
+}
+
+.header__link_type_register {
+    color: #000000;
+    transition: opacity 0.3s;
+    padding: 8px 20px;
+}
+
+.header__link_type_register:hover {
+    opacity: 0.7;
+}
+
+.header__link_type_login {
+    color: #FFFFFF;
+    background-color: #3456F3;
+    padding: 8px 20px;
+    transition: background-color 0.5s ease-in-out, color 0.5s; ;
+}
+
+.header__link_type_login:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.header__link_type_movies {
+    color: #000000;
+    transition: opacity 0.3s;
+    margin-right: 10px;
+}
+
+.header__link_type_movies:hover {
+    opacity: 0.7;
+}
+
+.header__link_type_account {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 8px 20px;
+    color: #000000;
+    background: #F4F4F4;
+    border-radius: 20px;
+    transition: background-color 0.5s ease-in-out, color 0.5s;
+}
+
+.header__link_type_account:hover {
+    opacity: 1;
+    background-color: #3456F3;
+    color: #FFFFFF;
+}
+
+.no-display {
+    display: none;
+}
