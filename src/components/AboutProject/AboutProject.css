@@ -89,3 +89,31 @@
     grid-column-start: 2;
     grid-column-end: 7;
 }
+
+@media(max-width: 992px) {
+    .about-project {
+      padding: 90px 50px;
+  }
+}
+
+@media(max-width: 720px) {
+    .about-project {
+        padding: 70px 18px;
+    }
+
+    .about-project__info {
+        flex-direction: column;
+    }
+
+    .about-project__info_card {
+        margin-bottom: 56px;
+    }
+
+    .about-project__info_card:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .about-project__info_card:last-child {
+        margin-bottom: 60px;
+    }
+}

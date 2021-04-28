@@ -52,3 +52,36 @@
 .footer__link:hover {
     opacity: 0.5;
 }
+
+@media(max-width: 992px) {
+    .footer {
+        padding: 79px 30px 20px 30px;
+    }
+}
+
+@media(max-width: 720px) {
+    .footer {
+        padding: 79px 10px 10px 10px;
+    }
+
+    .footer__text {
+        margin-bottom: 30px;
+    }
+
+    .footer__nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__links {
+        order: -1;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .footer__links-item:not(:last-child) {
+        margin: 0 0 12px 0;
+    }
+
+}

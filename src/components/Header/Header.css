@@ -12,3 +12,9 @@
     margin-right: 44px;
 }
 
+@media(max-width: 720px) {
+    .header {
+        padding: 18px 14px;
+    }
+}
+

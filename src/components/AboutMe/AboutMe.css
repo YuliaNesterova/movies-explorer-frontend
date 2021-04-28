@@ -55,7 +55,8 @@
 
 .about-me__description-photo {
     border-radius: 10px;
-    width: 28%;
+    width: 300px;
+    height: 327px;
 }
 
 .about-me__portfolio-heading {
@@ -103,4 +104,82 @@
 .about-me__portfolio-link:hover {
     background-position-y: 40%;
     opacity: 0.6;
+}
+
+@media(max-width: 992px) {
+    .about-me {
+        padding: 90px 50px;
+    }
+
+    .about-me__description-title {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .about-me__description-subtitle {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .about-me__description-paragraph {
+        font-size: 12px;
+        line-height: 18px;
+        max-width: 364px;
+    }
+
+    .about-me__description-photo {
+        width: 255px;
+        height: 290px;
+    }
+
+    .about-me__portfolio-link {
+        font-size: 28px;
+    }
+}
+
+@media(max-width: 720px) {
+    .about-me {
+        padding: 70px 14px;
+    }
+
+    .about-me__description {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 69px;
+    }
+
+    .about-me__description-photo {
+        order: -1;
+        width: 292px;
+        margin: 0 auto 40px auto;
+    }
+
+    .about-me__description-title {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+
+    .about-me__description-subtitle {
+        font-size: 11px;
+        line-height: 16px;
+        margin-bottom: 20px;
+    }
+
+    .about-me__description-paragraph {
+        font-size: 11px;
+        line-height: 16px;
+        margin-bottom: 40px;
+    }
+
+    .about-me__portfolio-heading {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .about-me__portfolio-link {
+        font-size: 18px;
+        line-height: 28px;
+        background: url('../../images/arrow__small.svg') right no-repeat;
+    }
 }
