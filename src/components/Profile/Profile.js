@@ -29,11 +29,11 @@ function Profile(props) {
                             <input type="text" className="profile__form-input-field" placeholder="email@mail.ru" disabled={isFormDisabled}/>
                         </div>
                     </fieldset>
+                    <span className={isFormDisabled ? 'profile__form-error no-display' : 'profile__form-error'}>При обновлении профиля произошла ошибка.</span>
                     {isFormDisabled ? <button className="profile__button profile__button_type_edit" onClick={handleEditProfileClick}>Редактировать</button> :
                         <button className="profile__button profile__button_type_save">Сохранить</button>}
-
                 </form>
-                <Link to="/" className="profile__signout-link">Выйти из аккаунта</Link>
+                <Link to="/" className={isFormDisabled ? 'profile__signout-link' : 'profile__signout-link no-display'}>Выйти из аккаунта</Link>
             </section>
         </>
 

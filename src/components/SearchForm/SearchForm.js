@@ -12,8 +12,11 @@ function SearchForm() {
                 </fieldset>
                 <button className="search__form-button" type="submit"></button>
                 <span className="search__toggle-border" />
-                <FilterCheckbox />
-                <h3 className="search__toggle-text">Короткометражки</h3>
+                <div className="search__toggle-box">
+                    <FilterCheckbox />
+                    <h3 className="search__toggle-text">Короткометражки</h3>
+                </div>
+
             </form>
         </section>
     )

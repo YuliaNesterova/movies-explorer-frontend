@@ -116,3 +116,31 @@
 .auth__link:hover {
     opacity: 0.7;
 }
+
+@media(max-width: 1179px) {
+    .register {
+        width: calc(100% - 186px*2);
+    }
+}
+
+@media(max-width: 720px) {
+    .register {
+        width: calc(100% - 30px*2);
+    }
+
+    .auth__title {
+        margin: 50px 0 80px 0;
+        align-self: center;
+    }
+
+    .auth__subtitle {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .auth__link {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+

@@ -8,6 +8,7 @@ import Footer from "../Footer/Footer";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
 import NotFound from "../NotFound/NotFound";
+import Preloader from "../Preloader/Preloader";
 
 function App() {
   return (

@@ -34,12 +34,11 @@
     color: #FFFFFF;
     background-color: #3456F3;
     padding: 8px 20px;
-    transition: background-color 0.5s ease-in-out, color 0.5s; ;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .header__link_type_login:hover {
-    background-color: #FFFFFF;
-    color: #000000;
+    opacity: 0.8;
 }
 
 .header__link_type_movies {
@@ -50,6 +49,10 @@
 
 .header__link_type_movies:hover {
     opacity: 0.7;
+}
+
+.header__link_type_movies:active {
+    font-weight: 500;
 }
 
 .header__link_type_account {
@@ -64,15 +67,136 @@
     color: #000000;
     background: #F4F4F4;
     border-radius: 20px;
-    transition: background-color 0.5s ease-in-out, color 0.5s;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .header__link_type_account:hover {
-    opacity: 1;
-    background-color: #3456F3;
-    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.header__burger-button {
+    background: url('../../images/burger-menu.svg') center no-repeat;
+    height: 44px;
+    width: 44px;
+    border: none;
+    outline: none;
+    display: none;
+}
+
+.header__burger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.header__burger-menu-container {
+    background: #FAFAFA;
+    width: 60%;
+    height:100%;
+    position: relative;
+    z-index: 0;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+}
+
+.header__burger-menu-close-button {
+    position: absolute;
+    background: url('../../images/close-button.svg') center no-repeat;
+    border: none;
+    outline: none;
+    height: 22px;
+    width: 22px;
+    top: 22px;
+    right: 22px;
+    z-index: 1;
+}
+
+.header__burger-menu-links {
+    padding: 129px 90px 90px 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__burger-menu-link {
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: 22px;
+    color: #000000;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.header__burger-menu-link:active {
+    border-bottom: 2px solid #000000;
+}
+
+.header__burger-menu-link_type_account {
+    margin: 621px 0 0 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    background: #F4F4F4;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.header__burger-menu-link_type_account:hover {
+    border: none;
+    opacity: 0.8;
 }
 
 .no-display {
     display: none;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+@media(max-width: 768px) {
+    .header__link_type_account{
+        display: none;
+    }
+
+    .header__link_type_movies {
+        display: none;
+    }
+
+    .header__burger-button {
+        display: block;
+    }
+
+    .no-display {
+        display: none;
+    }
+}
+
+@media(max-width: 767px) {
+    .header__burger-menu-container {
+        width: 100%;
+        height:100%;
+    }
+
+    .header__burger-menu-links {
+        padding: 144px 10px 46px 10px;
+    }
 }

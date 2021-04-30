@@ -21,18 +21,6 @@ function AboutMe() {
                 </div>
                 <img src={student__photo} alt="Юлия" className="about-me__description-photo"/>
             </div>
-            <h4 className="about-me__portfolio-heading">Портфолио</h4>
-            <ul className="about-me__portfolio-links">
-                <li className="about-me__portfolio-links-item">
-                    <a href="https://yulianesterova.github.io/how-to-learn/" target="_blank" rel="noopener" className="about-me__portfolio-link">Статичный сайт</a>
-                </li>
-                <li className="about-me__portfolio-links-item">
-                    <a href="https://yulianesterova.github.io/russian-travel/" target="_blank" rel="noopener" className="about-me__portfolio-link">Адаптивный сайт</a>
-                </li>
-                <li className="about-me__portfolio-links-item">
-                    <a href="https://mesto.nesterova.students.nomoredomains.icu/" target="_blank" rel="noopener" className="about-me__portfolio-link">Одностраничное приложение</a>
-                </li>
-            </ul>
         </section>
     )
 }

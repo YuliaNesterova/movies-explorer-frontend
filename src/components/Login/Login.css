@@ -10,3 +10,15 @@
 .login__fields {
     margin-bottom: 155px;
 }
+
+@media(max-width: 1179px) {
+    .login {
+        width: calc(100% - 186px*2);
+    }
+}
+
+@media(max-width: 720px) {
+    .login {
+        width: calc(100% - 30px*2);
+    }
+}

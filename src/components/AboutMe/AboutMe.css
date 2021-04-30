@@ -1,5 +1,5 @@
 .about-me {
-    padding: 110px 70px 125px 70px;
+    padding: 110px 70px 100px 70px;
 }
 
 .about-me__heading {
@@ -57,53 +57,6 @@
     border-radius: 10px;
     width: 300px;
     height: 327px;
-}
-
-.about-me__portfolio-heading {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 20px;
-    color: #A0A0A0;
-    margin: 0 0 50px 0;
-}
-
-.about-me__portfolio-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.about-me__portfolio-links-item {
-    width: 100%;
-
-}
-
-.about-me__portfolio-links-item:not(:last-child) {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #E8E8E8;
-    padding-bottom: 19px;
-}
-
-
-.about-me__portfolio-link {
-    background: url("../../images/link__Arrow.svg") right no-repeat;
-    width: 100%;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 50px;
-    letter-spacing: -0.04em;
-    text-decoration: none;
-    color: #000000;
-    display: flex;
-    justify-content: space-between;
-    transition: background-position-y 0.2s, opacity 0.5s;
-}
-
-.about-me__portfolio-link:hover {
-    background-position-y: 40%;
-    opacity: 0.6;
 }
 
 @media(max-width: 992px) {

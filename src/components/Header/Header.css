@@ -2,6 +2,7 @@
     background-color: #DDDEE3;
     display: flex;
     padding: 18px 70px;
+    position: relative;
 }
 
 .header_type_white {
@@ -10,6 +11,12 @@
 
 .header__logo {
     margin-right: 44px;
+}
+
+@media(max-width: 992px) {
+    .header {
+        padding: 18px 30px;
+    }
 }
 
 @media(max-width: 720px) {

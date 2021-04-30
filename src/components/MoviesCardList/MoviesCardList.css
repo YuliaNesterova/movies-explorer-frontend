@@ -37,3 +37,37 @@
     border-color: #3456F3;
     cursor: pointer;
 }
+
+@media(max-width: 1279px) {
+    .movies__list {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media(max-width: 920px) {
+    .movies {
+        padding: 70px 30px 80px 30px;
+    }
+
+    .movies__list {
+        grid-template-columns: repeat(2, auto);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
+}
+
+@media(max-width: 720px) {
+    .movies {
+        padding: 40px 10px 80px 10px;
+    }
+
+    .movies__list {
+        grid-template-columns: repeat(1, auto);
+        grid-column-gap: 0;
+        grid-row-gap: 34px;
+    }
+
+    .movies__more-button {
+        width: 240px;
+    }
+}

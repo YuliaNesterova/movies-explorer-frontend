@@ -39,3 +39,16 @@
 .not-found__link:hover {
     opacity: 0.7;
 }
+
+@media(max-width: 1179px) {
+    .not-found {
+        width: calc(100% - 184px*2);
+    }
+}
+
+@media(max-width: 720px) {
+    .not-found {
+        width: calc(100% - 10px*2);
+        padding-top: 329px;
+    }
+}

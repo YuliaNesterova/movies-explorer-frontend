@@ -37,3 +37,24 @@
     background-position: 20% 50%;
     background-color: #EBEBEB;
 }
+
+@media(max-width: 920px) {
+    .search__toggle-label {
+        margin: 0 15px 0 19px;
+    }
+}
+
+@media(max-width: 720px) {
+    .search__toggle-box {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        left: 0;
+        bottom: 44px;
+    }
+
+    .search__toggle-label {
+        margin: 0 13px 0 0;
+    }
+}
