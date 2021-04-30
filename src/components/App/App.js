@@ -4,11 +4,9 @@ import Movies from '../Movies/Movies';
 import SavedMovies from "../SavedMovies/SavedMovies";
 import Profile from "../Profile/Profile";
 import { Route, Switch } from "react-router-dom";
-import Footer from "../Footer/Footer";
 import Register from "../Register/Register";
 import Login from "../Login/Login";
 import NotFound from "../NotFound/NotFound";
-import Preloader from "../Preloader/Preloader";
 
 function App() {
   return (

@@ -15,8 +15,8 @@ function AboutMe() {
                                                                    После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами
                                                                    и ушёл с постоянной работы.</p>
                     <div className="about-me__description-links">
-                        <a href="https://www.facebook.com/ydnesterova/" target="_blank" rel="noopener" className="about-me__description-link">Facebook</a>
-                        <a href="https://github.com/YuliaNesterova" target="_blank" rel="noopener" className="about-me__description-link">Github</a>
+                        <a href="https://www.facebook.com/ydnesterova/" target="_blank" rel="noreferrer" className="about-me__description-link">Facebook</a>
+                        <a href="https://github.com/YuliaNesterova" target="_blank" rel="noreferrer" className="about-me__description-link">Github</a>
                     </div>
                 </div>
                 <img src={student__photo} alt="Юлия" className="about-me__description-photo"/>

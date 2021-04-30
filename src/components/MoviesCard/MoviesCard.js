@@ -15,9 +15,9 @@ function MoviesCard(props) {
 
     return (
         <li className="movies__list-item">
-            <img src={poster} alt="33 слова о дизайне" className="movies__list-poster"/>
+            <img src={poster} alt="По волнам: Искусство звука в кино" className="movies__list-poster"/>
             <div onMouseEnter={handleCardMouseOver} onMouseLeave={handleCardMouseOut} className="movies__list-description">
-                <p className="movies__list-title">Gimme Danger: И</p>
+                <p className="movies__list-title">По волнам: Искусство звука в кино</p>
 
                 <button className={props.saved ?
                     `movies__list-delete-button ${isDeleteButtonVisible ? 'movies__list-delete-button_visible' : ''}` :
