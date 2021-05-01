@@ -8,7 +8,7 @@ function SearchForm() {
             <form className="search__form">
                 <img src={search__icon} alt="Поиск" className="search__icon"/>
                 <fieldset className="search__form-fields">
-                    <input type="text" placeholder="Фильм" className="search__form-input"/>
+                    <input type="text" placeholder="Фильм" className="search__form-input" required/>
                 </fieldset>
                 <button className="search__form-button" type="submit"></button>
                 <span className="search__toggle-border" />

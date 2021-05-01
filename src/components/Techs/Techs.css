@@ -105,6 +105,37 @@
 
     .techs__list {
         display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 10px;
+        width: calc(100% - 180px*2);
+        margin: auto;
+    }
+
+}
+
+@media(max-width: 600px) {
+    .techs__list {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 10px;
+        width: calc(100% - 120px*2);
+        margin: auto;
+    }
+}
+
+@media(max-width: 550px) {
+    .techs__list {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 10px;
+        width: calc(100% - 70px*2);
+        margin: auto;
+    }
+}
+
+@media(max-width: 425px) {
+    .techs__list {
+        display: grid;
         grid-template-columns: repeat(2, auto);
         grid-gap: 10px;
         width: calc(100% - (71px - 18px)*2);

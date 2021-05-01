@@ -9,11 +9,10 @@ function AboutMe() {
                 <div className="about-me__description-text">
                     <h3 className="about-me__description-title">Юлия</h3>
                     <p className="about-me__description-subtitle">Фронтенд-разработчик, 26 лет</p>
-                    <p className="about-me__description-paragraph">Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена
-                                                                   и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом.
-                                                                   Недавно начал кодить. С 2015 года работал в компании «СКБ Контур».
-                                                                   После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами
-                                                                   и ушёл с постоянной работы.</p>
+                    <p className="about-me__description-paragraph">Я родилась и живу в Москве, закончил факультет экономики ВАВТ.
+                                                                   С 2017 года работаю в компании Renault.
+                                                                   Работаю в логистике и начинаю свой путь в веб-разработке.
+                                                                   </p>
                     <div className="about-me__description-links">
                         <a href="https://www.facebook.com/ydnesterova/" target="_blank" rel="noreferrer" className="about-me__description-link">Facebook</a>
                         <a href="https://github.com/YuliaNesterova" target="_blank" rel="noreferrer" className="about-me__description-link">Github</a>

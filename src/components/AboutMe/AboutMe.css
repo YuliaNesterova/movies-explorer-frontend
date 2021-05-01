@@ -36,6 +36,7 @@
     line-height: 22px;
     margin: 0 0 99px 0;
     max-width: 600px;
+    min-height: 108px;
 }
 
 .about-me__description-link {
