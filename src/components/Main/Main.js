@@ -9,7 +9,7 @@ import Portfolio from "../Portfolio/Portfolio";
 function Main(props) {
     return (
     <>
-       <Header loggedIn={props.loggedIn}/>
+       <Header loggedIn={props.loggedIn} main={true}/>
        <Promo />
        <AboutProject />
        <Techs />

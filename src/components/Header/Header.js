@@ -4,7 +4,7 @@ import './Header.css'
 
 function Header(props) {
     return (
-        <section className={props.loggedIn ? 'header header_type_white' : 'header'}>
+        <section className={props.main ? 'header' : 'header header_type_white'}>
             <img className="header__logo" alt="Лого" src={logo}/>
             <Navigation loggedIn={props.loggedIn}/>
         </section>

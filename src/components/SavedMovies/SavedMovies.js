@@ -6,7 +6,7 @@ import Footer from "../Footer/Footer";
 function SavedMovies(props) {
     return (
         <>
-            <Header loggedIn={props.loggedIn}/>
+            <Header loggedIn={props.loggedIn} main={false}/>
             <SearchForm />
             <MoviesCardList saved={true}/>
             <Footer />
