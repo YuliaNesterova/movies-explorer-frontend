@@ -18,7 +18,7 @@ import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
 function App() {
     const [loggedIn, setLoggedIn] = React.useState(false);
-    const [editErrorMessage, setEditErrorMessage] = React.useState('');
+    const [editProfileMessage, setEditProfileMessage] = React.useState('');
     const [registerErrorMessage, setRegisterErrorMessage] = React.useState('');
     const [loginErrorMessage, setLoginErrorMessage] = React.useState('');
     const [isUpdateSuccess, setIsUpdateSuccess] = React.useState(true);
@@ -26,21 +26,6 @@ function App() {
     const [currentUser, setCurrentUser] = React.useState('');
 
     const history = useHistory();
-
-    function handleRegister(name, password, email) {
-        auth.register(name, password, email)
-            .then((res) => {
-                if(res.user) {
-                    setRegisterErrorMessage('')
-                    history.push('/signin');
-                } else if(res.message) {
-                    setRegisterErrorMessage(res.message);
-                }
-            })
-            .catch(() => {
-                setRegisterErrorMessage('Что-то пошло не так...');
-            })
-    }
 
     function handleLogin(password, email) {
         auth.authorize(password, email)
@@ -58,22 +43,35 @@ function App() {
             })
     }
 
+    function handleRegister(name, password, email) {
+        auth.register(name, password, email)
+            .then((res) => {
+                if(res.user) {
+                    setRegisterErrorMessage('')
+                    handleLogin(password, email);
+                } else if(res.message) {
+                    setRegisterErrorMessage(res.message);
+                }
+            })
+            .catch(() => {
+                setRegisterErrorMessage('Что-то пошло не так...');
+            })
+    }
+
     function handleEditUserInfo(name, email) {
         auth.editUserData(token, name, email)
             .then((newUser) => {
                 if(newUser._id) {
                     setCurrentUser(newUser);
                     setIsUpdateSuccess(true);
-                    setEditErrorMessage('');
-
                 } else if(newUser.message){
-                    setEditErrorMessage(newUser.message);
+                    setEditProfileMessage(newUser.message);
                     setIsUpdateSuccess(false);
                 }
                     return
             })
             .catch(() => {
-                setEditErrorMessage('При обновлении профиля произошла ошибка');
+                setEditProfileMessage('При обновлении профиля произошла ошибка');
                 setIsUpdateSuccess(false);
             })
     }
@@ -87,6 +85,7 @@ function App() {
     function clearAllErrorMessages() {
         setRegisterErrorMessage('');
         setLoginErrorMessage('');
+        setEditProfileMessage('');
     }
 
     React.useEffect(() => {
@@ -129,8 +128,7 @@ function App() {
               <ProtectedRoute path="/saved-movies" loggedIn={loggedIn} component={SavedMovies}/>
               <ProtectedRoute path="/profile" loggedIn={loggedIn} component={Profile} onSignOut={handleSignOut}
                               onChangeUser={handleEditUserInfo}
-                              errorMessage={editErrorMessage} isUpdateSuccess={isUpdateSuccess}/>
-
+                              message={editProfileMessage} isUpdateSuccess={isUpdateSuccess}/>
               <Route exact path="/signup" >
                   <Register onRegister={handleRegister} errorMessage={registerErrorMessage} onClear={clearAllErrorMessages}/>
               </Route>

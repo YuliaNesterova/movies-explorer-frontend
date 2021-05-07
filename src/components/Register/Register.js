@@ -25,7 +25,7 @@ function Register(props) {
             <form className="register__form auth__form" onSubmit={handleRegister}>
                 <fieldset className="register__fields auth__fields">
                     <p className="register__input-name auth__input-name">Имя</p>
-                    <input type="text" name="name" className="register__input auth__input"
+                    <input type="text" name="name" pattern="[а-яА-Яa-zA-ZёË\- ]{1,}" className="register__input auth__input"
                            value={values.name || ''} onChange={handleChange}
                            required/>
                     <span className="register__error auth__error">{errors.name}</span>

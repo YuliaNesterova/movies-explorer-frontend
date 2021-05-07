@@ -113,15 +113,22 @@
     opacity: 0.7;
 }
 
-.profile__form-error {
+.profile__form-message {
     font-style: normal;
     font-weight: normal;
     font-size: 11px;
     line-height: 13px;
     min-height: 13px;
     text-align: center;
-    color: #FF004C;
     margin-bottom: 20px;
+}
+
+.profile__form-error {
+    color: #FF004C;
+}
+
+.profile__form-success {
+    color: #2BE080;
 }
 
 .profile__button_type_save {
