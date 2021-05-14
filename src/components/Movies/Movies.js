@@ -7,8 +7,11 @@ function Movies(props) {
     return (
         <>
        <Header loggedIn={props.loggedIn} main={false}/>
-       <SearchForm />
-       <MoviesCardList />
+       <SearchForm onSearchMovies={props.onSearchMovies} onShortMoviesCheck={props.onShortMoviesCheck} saved={false}
+                   isChecked={props.isShortMoviesChecked} />
+       <MoviesCardList movies={props.movies} isSearching={props.isSearching} notFound={props.notFound}
+                       isErrorActive={props.isErrorActive} onMovieSave={props.onMovieSave}
+                       onDeleteMovie={props.onDeleteMovie} saved={false} savedMovies={props.savedMovies}/>
             <Footer />
         </>
     )

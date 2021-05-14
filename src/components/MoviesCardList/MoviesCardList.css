@@ -9,7 +9,7 @@
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 272px);
     grid-column-gap: 20px;
     grid-row-gap: 38px;
 }
@@ -40,7 +40,7 @@
 
 @media(max-width: 1279px) {
     .movies__list {
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 270px);
     }
 }
 
@@ -50,7 +50,7 @@
     }
 
     .movies__list {
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 339px);
         grid-column-gap: 30px;
         grid-row-gap: 30px;
     }
@@ -62,7 +62,7 @@
     }
 
     .movies__list {
-        grid-template-columns: repeat(1, auto);
+        grid-template-columns: repeat(1, 300px);
         grid-column-gap: 0;
         grid-row-gap: 34px;
     }

@@ -1,6 +1,12 @@
+.movies__list-item {
+    max-width: 270px;
+}
+
 .movies__list-poster {
-    width: 270px;
-    height: 151px;
+    min-width: 270px;
+    max-width: 270px;
+    min-height: 151px;
+    max-height: 151px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -71,17 +77,37 @@
     border-top: 1px solid #E8E8E8;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 920px) {
+    .movies__list-item {
+        max-width: 339px;
+    }
     .movies__list-poster {
-        width: 339px;
-        height: 190px;
+        min-width: 339px;
+        max-width: 339px;
+        min-height: 190px;
+        max-height: 190px;
+    }
+}
+
+@media(max-width: 768px) {
+    .movies__list-item {
+        max-width: 300px;
+    }
+
+    .movies__list-poster {
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 168px;
+        max-height: 168px;
     }
 }
 
 @media(max-width: 425px) {
     .movies__list-poster {
-        width: 300px;
-        height: 168px;
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 168px;
+        max-height: 168px;
     }
 
     .movies__list-title {
@@ -92,5 +118,9 @@
     .movies__list-duration {
         font-size: 10px;
         line-height: 12px;
+    }
+
+    .movies__list-item {
+        max-width: 300px;
     }
 }

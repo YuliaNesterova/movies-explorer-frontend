@@ -55,10 +55,11 @@ function Profile(props) {
                         <span className="profile__input-error">{errors.email}</span>
                     </fieldset>
                     <span
-                        className={`profile__form-message ${props.isUpdateSuccess ? 'profile__form-success' : 'profile__form-error'}`}>{props.message}</span>
+                        className={`profile__form-message ${props.isUpdateSuccess ? 'profile__form-message_type_success' : 'profile__form-message_type_error'}`}>
+                        {props.message}</span>
                     {isFormDisabled ? <button className="profile__button profile__button_type_edit" onClick={handleEditProfileClick}>Редактировать</button> :
                         <button type="submit" disabled={!isFormValid}
-                                className={`profile__button profile__button_type_save${isFormValid ? '' : 'profile__button_type_save_disabled'}`}>
+                                className={`profile__button profile__button_type_save ${isFormValid ? '' : 'profile__button_type_save_disabled'}`}>
                             Сохранить</button>}
                 </form>
                 <button className={isFormDisabled ? 'profile__signout-link' : 'profile__signout-link no-display'}

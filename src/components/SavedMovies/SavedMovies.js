@@ -7,8 +7,8 @@ function SavedMovies(props) {
     return (
         <>
             <Header loggedIn={props.loggedIn} main={false}/>
-            <SearchForm />
-            <MoviesCardList saved={true}/>
+            <SearchForm onSearchSavedMovies={props.onSearchSavedMovies} saved={true}/>
+            <MoviesCardList saved={true} movies={props.movies} onDeleteMovie={props.onDeleteMovie} />
             <Footer />
         </>
     )
