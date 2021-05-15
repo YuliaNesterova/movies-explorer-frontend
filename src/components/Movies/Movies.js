@@ -11,7 +11,8 @@ function Movies(props) {
                    isChecked={props.isShortMoviesChecked} />
        <MoviesCardList movies={props.movies} isSearching={props.isSearching} notFound={props.notFound}
                        isErrorActive={props.isErrorActive} onMovieSave={props.onMovieSave}
-                       onDeleteMovie={props.onDeleteMovie} saved={false} savedMovies={props.savedMovies}/>
+                       onDeleteMovie={props.onDeleteMovie} saved={false} savedMovies={props.savedMovies}
+                       isMobile={props.isMobile} isTablet={props.isTablet} />
             <Footer />
         </>
     )

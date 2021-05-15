@@ -121,7 +121,6 @@ function App() {
 
                 return filteredMovies.push(movie);
             }
-
         })
 
         return filteredMovies
@@ -129,7 +128,6 @@ function App() {
 
     function searchSavedMovies(keyWord) {
         const searchSavedResult = handleSearchMovies(savedMovies, keyWord);
-
         setSavedMovies(searchSavedResult);
     }
 
@@ -188,6 +186,7 @@ function App() {
     }
 
     React.useEffect(() => {
+
         function checkToken() {
 
             if(localStorage.getItem('token')) {
@@ -203,7 +202,6 @@ function App() {
                             localStorage.setItem('savedMovies', JSON.stringify(movies));
                             setCurrentUser(userData);
                             setLoggedIn(true);
-
                             history.push('/movies');
                         })
                         .catch((err) => {
