@@ -71,7 +71,7 @@ function MoviesCardList(props) {
             </ul>
 
             <button className={props.saved ? 'movies__more-button movies__more-button_invisible' :
-                `movies__more-button ${props.movies.length === displayedMovies.length ? 'movies__more-button_invisible' : ''}`}
+                `movies__more-button ${props.movies?.length === displayedMovies?.length ? 'movies__more-button_invisible' : ''}`}
               onClick={handleMoviesIncrease} >Еще</button>
         </section>
     )
