@@ -19,17 +19,17 @@ function Login(props) {
         <section className="login">
             <Logo />
             <h2 className="login__title auth__title">Рады видеть!</h2>
-            <form className="login__form auth__form" onSubmit={handleLogin}>
+            <form className="login__form auth__form" onSubmit={handleLogin} >
                 <fieldset className="login__fields auth__fields">
                     <p className="login__input-name auth__input-name">E-mail</p>
                     <input type="email" name="email" className="login__input auth__input"
                            value={values.email || ''} onChange={handleChange}
-                           required/>
+                           required disabled={props.isSaving}/>
                     <span className="login__error auth__error">{errors.email}</span>
                     <p className="login__input-name auth__input-name">Пароль</p>
                     <input type="password" name="password" className="login__input auth__input"
                            value={values.password || ''} onChange={handleChange}
-                           required minLength="8"/>
+                           required minLength="8" disabled={props.isSaving}/>
                     <span className="login__error auth__error">{errors.password}</span>
                 </fieldset>
                 <span className="login__submit-error auth__submit-error">{props.errorMessage}</span>

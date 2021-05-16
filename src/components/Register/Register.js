@@ -27,17 +27,17 @@ function Register(props) {
                     <p className="register__input-name auth__input-name">Имя</p>
                     <input type="text" name="name" pattern="[а-яА-Яa-zA-ZёË\- ]{1,}" className="register__input auth__input"
                            value={values.name || ''} onChange={handleChange}
-                           required/>
+                           required disabled={props.isSaving}/>
                     <span className="register__error auth__error">{errors.name}</span>
                     <p className="register__input-name auth__input-name">E-mail</p>
                     <input type="email" name="email" className="register__input auth__input"
                            value={values.email || ''} onChange={handleChange}
-                           required/>
+                           required disabled={props.isSaving}/>
                     <span className="register__error auth__error">{errors.email}</span>
                     <p className="register__input-name auth__input-name">Пароль</p>
                     <input type="password" name="password" className="register__input auth__input"
                            value={values.password || ''} onChange={handleChange}
-                           required minLength="8"/>
+                           required minLength="8" disabled={props.isSaving}/>
                     <span className="register__error auth__error">{errors.password}</span>
                 </fieldset>
                 <span className="register__submit-error auth__submit-error">{props.errorMessage}</span>

@@ -27,8 +27,14 @@ function Profile(props) {
     }
 
     React.useEffect(() => {
-        setIsFormDisabled(props.isUpdateSuccess)
+        setIsFormDisabled(props.isUpdateSuccess);
     },[props.isUpdateSuccess, props.onChangeUser])
+
+    React.useEffect(() => {
+        if(props.isSaving) {
+            setIsFormDisabled(true);
+        }
+    }, [props.isSaving])
 
     return (
         <>
