@@ -202,7 +202,6 @@ function App() {
                             localStorage.setItem('savedMovies', JSON.stringify(movies));
                             setCurrentUser(userData);
                             setLoggedIn(true);
-                            history.push('/movies');
                         })
                         .catch((err) => {
                             console.log(`Ошибка ${err}, попробуйте еще раз`);
@@ -245,13 +244,13 @@ function App() {
               <ProtectedRoute path="/profile" loggedIn={loggedIn} component={Profile} onSignOut={handleSignOut}
                               onChangeUser={handleEditUserInfo}
                               message={editProfileMessage} isUpdateSuccess={isUpdateSuccess}/>
-              <Route exact path="/signup" >
+              <Route path="/signup" >
                   <Register onRegister={handleRegister} errorMessage={registerErrorMessage} onClear={clearAllErrorMessages}/>
               </Route>
-              <Route exact path="/signin" >
+              <Route path="/signin" >
                   <Login onLogin={handleLogin} errorMessage={loginErrorMessage} onClear={clearAllErrorMessages}/>
               </Route>
-              <Route exact path="/notfound" >
+              <Route path="*" >
                   <NotFound />
               </Route>
 
