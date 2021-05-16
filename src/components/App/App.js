@@ -230,21 +230,15 @@ function App() {
                 const token = localStorage.getItem('token');
                 const searchedMovies = JSON.parse(localStorage.getItem('movies'));
 
-
                 if(token) {
                     Promise.all([mainApi.getUserData(token), mainApi.getSavedMovies(token)])
                         .then(([userData, movies]) => {
                             setCurrentUser(userData);
                             setToken(localStorage.getItem('token'));
-                            // setSavedMovies(movies);
-                            // localStorage.setItem('savedMovies', JSON.stringify(movies));
                             const films = [...savedMovies, movies];
                             localStorage.setItem('savedMovies', JSON.stringify(films));
                             setSavedMovies(prevState => ([...prevState, movies]));
-                            // setSavedMovies([...savedMovies, movies]);
-                            // localStorage.setItem('savedMovies', JSON.stringify(movies));
                             setMovies(searchedMovies);
-
                             localStorage.setItem('loggedIn', 'true');
                         })
                         .catch((err) => {
