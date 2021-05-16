@@ -110,6 +110,8 @@ function App() {
         localStorage.removeItem('loggedIn');
         localStorage.removeItem('token');
         localStorage.removeItem('movies');
+        setMovies([]);
+        setAllMovies([]);
         history.push('/');
     }
 
@@ -223,16 +225,22 @@ function App() {
         function checkToken() {
 
             if(localStorage.getItem('token')) {
-                const token = localStorage.getItem('token');
                 const searchedMovies = JSON.parse(localStorage.getItem('movies'));
                 setToken(localStorage.getItem('token'));
 
                 if(token) {
                     Promise.all([mainApi.getUserData(token), mainApi.getSavedMovies(token)])
                         .then(([userData, movies]) => {
+
+                            console.log(movies)
+                            // setSavedMovies(movies);
+                            // localStorage.setItem('savedMovies', JSON.stringify(movies));
+                            const films = [...savedMovies, movies];
+                            localStorage.setItem('savedMovies', JSON.stringify(films));
+                            setSavedMovies(prevState => ([...prevState, movies]));
+                            // setSavedMovies([...savedMovies, movies]);
+                            // localStorage.setItem('savedMovies', JSON.stringify(movies));
                             setMovies(searchedMovies);
-                            setSavedMovies(movies);
-                            localStorage.setItem('savedMovies', JSON.stringify(movies));
                             setCurrentUser(userData);
                             localStorage.setItem('loggedIn', 'true');
                         })

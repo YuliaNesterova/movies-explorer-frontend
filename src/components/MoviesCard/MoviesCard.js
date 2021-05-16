@@ -21,8 +21,6 @@ function MoviesCard(props) {
         movieId: props.movie.id,
     }
 
-
-
     const editedDuration = `${Math.trunc(movie.duration/60)}ч${movie.duration % 60}м`;
     const image = `${props.movie.image === null ? `${movieImage}` : `https://api.nomoreparties.co${props.movie.image?.url}`}`;
     const savedMovies = JSON.parse(localStorage.getItem('savedMovies'));

@@ -1,5 +1,5 @@
+// const BASE_URL = 'https://api.movies-nest.students.nomoredomains.club';
 const BASE_URL = 'https://api.movies-nest.students.nomoredomains.club';
-
 export function register (name, password, email) {
     return fetch(`${BASE_URL}/signup`, {
         method: 'POST',
