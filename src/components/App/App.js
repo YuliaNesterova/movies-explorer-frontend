@@ -175,7 +175,6 @@ function App() {
                     .finally(() => {
                         setIsSearching(false);
                         setIsShortMoviesChecked(false);
-
                     })
             } else {
                 const searchResult = handleSearchMovies(allMovies, keyWord);
@@ -184,13 +183,16 @@ function App() {
                     setNotFound(true);
                     setMovies([]);
                     setIsSearching(false);
+                    setIsShortMoviesChecked(false);
                 } else if(searchResult.length !== 0) {
                     localStorage.setItem('movies', JSON.stringify(searchResult));
                     setMovies(JSON.parse(localStorage.getItem('movies')));
                     setIsSearching(false);
+                    setIsShortMoviesChecked(false);
                 } else {
                     setIsMoviesErrorActive(true);
                     setMovies([]);
+                    setIsShortMoviesChecked(false);
                 }
             }
     }
@@ -225,14 +227,15 @@ function App() {
         function checkToken() {
 
             if(localStorage.getItem('token')) {
+                const token = localStorage.getItem('token');
                 const searchedMovies = JSON.parse(localStorage.getItem('movies'));
-                setToken(localStorage.getItem('token'));
+
 
                 if(token) {
                     Promise.all([mainApi.getUserData(token), mainApi.getSavedMovies(token)])
                         .then(([userData, movies]) => {
-
-                            console.log(movies)
+                            setCurrentUser(userData);
+                            setToken(localStorage.getItem('token'));
                             // setSavedMovies(movies);
                             // localStorage.setItem('savedMovies', JSON.stringify(movies));
                             const films = [...savedMovies, movies];
@@ -241,7 +244,7 @@ function App() {
                             // setSavedMovies([...savedMovies, movies]);
                             // localStorage.setItem('savedMovies', JSON.stringify(movies));
                             setMovies(searchedMovies);
-                            setCurrentUser(userData);
+
                             localStorage.setItem('loggedIn', 'true');
                         })
                         .catch((err) => {
