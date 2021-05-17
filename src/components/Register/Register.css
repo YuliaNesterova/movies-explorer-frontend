@@ -17,7 +17,6 @@
 
 .auth__form {
     width: 100%;
-
 }
 
 .auth__fields {
@@ -69,10 +68,23 @@
     min-height: 12px;
 }
 
+.auth__submit-error {
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    color: #FF004C;
+    width: 100%;
+    min-height: 16px;
+    margin-bottom: 10px;
+}
+
 .auth__submit-button {
-    background: #3456F3;
+    background-color: #3456F3;
     border-radius: 3px;
-    border: 1px solid #3456F3;
+    border: none;
     width: 100%;
     height: 45px;
     outline: none;
@@ -82,7 +94,12 @@
     line-height: 17px;
     text-align: center;
     color: #FFFFFF;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.auth__submit-button_disabled {
+    background-color: #F8F8F8;
+    color: #C2C2C2;
 }
 
 .auth__submit-button:hover {

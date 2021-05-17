@@ -1,11 +1,12 @@
 import logo from '../../images/logo.svg';
 import Navigation from "../Navigation/Navigation";
 import './Header.css'
+import {Link} from "react-router-dom";
 
 function Header(props) {
     return (
-        <section className={props.loggedIn ? 'header header_type_white' : 'header'}>
-            <img className="header__logo" alt="Лого" src={logo}/>
+        <section className={props.main ? 'header' : 'header header_type_white'}>
+            <Link to="/"><img className="header__logo" alt="Лого" src={logo}/></Link>
             <Navigation loggedIn={props.loggedIn}/>
         </section>
     )
